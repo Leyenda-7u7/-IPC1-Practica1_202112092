@@ -4,6 +4,7 @@
  */
 package pr1;
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  *
  * @author USUARIO
@@ -16,13 +17,13 @@ public class Pr1 {
     public static void main(String[] args) {//System.out.println("");
         Scanner w=new Scanner(System.in);
         Scanner n=new Scanner(System.in);
-        int e=0, o1=0;
+        int e1=0, o1=0;
         System.out.println("-----CALCULADORA-----");
         System.out.println("1.Iniciar Sistema");
         System.out.println("2.Salir");
         System.out.print("Elija una opcion:");
-        e=w.nextInt();
-        if(e==1){//Inicio de las operaciones en la calculadora
+        e1=w.nextInt();
+        if(e1==1){//Inicio de las operaciones en la calculadora
              do{
             Scanner b= new Scanner(System.in);     
             int b1=0; 
@@ -33,7 +34,7 @@ public class Pr1 {
             System.out.println("4.Operaciones Avanzadas");
             System.out.print("Elija una opcion:");
             b1=b.nextInt();
-            switch(b1){
+            switch(b1){//Inicio del programa
                 case 1:
                     Scanner a1= new Scanner(System.in);
                     int a=0;
@@ -45,7 +46,7 @@ public class Pr1 {
                     System.out.println("4. Division");
                     System.out.print("Elija una opcion:");
                     a=a1.nextInt();
-                    switch(a){
+                    switch(a){//Inicio de aritmeticas
                         case 1://Case numero 1 para la suma
                             Scanner x= new Scanner(System.in);
                             Scanner y= new Scanner(System.in);
@@ -119,20 +120,19 @@ public class Pr1 {
                            Scanner q= new Scanner(System.in);
                            Scanner p= new Scanner(System.in);
                            double d1=0, d2=0;
-                    System.out.println("Division");
-                    System.out.println("Ingrese el primer numero");
-                    d1 = q.nextDouble();
-                    System.out.println("Ingrese el segundo numero");
-                    d2 = p.nextDouble();
-                    d1 = d1/d2;
-                    System.out.println("La divison de los números es: "+d1);
+                        System.out.println("Division");
+                        System.out.println("Ingrese el primer numero");
+                        d1 = q.nextDouble();
+                        System.out.println("Ingrese el segundo numero");
+                        d2 = p.nextDouble();
+                        d1 = d1/d2;
+                        System.out.println("La divison de los números es: "+d1);
                             break;
                         default:
                             System.out.println("********");
                             System.out.println("Opcion incorrecta");
                             break;
-                    }//Fin del switch dentro de arimeticas
-                    break;//Fin de arit
+                    }//Fin del switch dentro de arimeticas 
                 case 2:// Case 2 de geometricas
                     Scanner t= new Scanner(System.in);
                     Scanner u=new Scanner(System.in);
@@ -144,33 +144,33 @@ public class Pr1 {
                     System.out.println("2. Perimetros");
                     System.out.print("Elija una opcion:");
                     t1=t.nextInt();
-                    u1=u.nextInt();
+                    /*u1=u.nextInt();*/
                     switch(t1){ //swtch para las areas 
                         case 1://Case numero 1 para las areas
-                    Scanner A1= new Scanner(System.in);
-                    int A=0;
-                    System.out.println("----Areas----");
-                    System.out.println("1. Area de un triangulo");
-                    System.out.println("2. Area de un cuadrado");
-                    System.out.println("3. Area de un rectangulo");
-                    System.out.println("4. Area de un circulo");
-                     A=A1.nextInt();
-                    switch(A){
+                        Scanner A1= new Scanner(System.in);
+                        int A=0;
+                        System.out.println("----Areas----");
+                        System.out.println("1. Area de un triangulo");
+                        System.out.println("2. Area de un cuadrado");
+                        System.out.println("3. Area de un rectangulo");
+                        System.out.println("4. Area de un circulo");
+                            A=A1.nextInt();
+                            switch(A){
                         case 1: //case 1 para triangulo
-                    Scanner ta1= new Scanner(System.in);
-                    Scanner ta2= new Scanner(System.in);
-                    Scanner ta3=new Scanner(System.in);
-                   int x1=0, x2=0, x3=0;
-                   int triangulo;
-                    System.out.println("triangulo");;
-                     System.out.println("Ingrese lado 1");
-                    x1 = ta1.nextInt();
-                    System.out.println("Ingrese lado 2");
-                    x2 = ta2.nextInt();
-                    System.out.println("Ingrese lado 3");
-                    x3 = ta3.nextInt();
-                    triangulo= (x1+x2+x3);
-                    System.out.println("El area del triangulo es: "+triangulo);
+                        Scanner ta1= new Scanner(System.in);
+                        Scanner ta2= new Scanner(System.in);
+                        Scanner ta3=new Scanner(System.in);
+                        int x1=0, x2=0, x3=0;
+                        int triangulo;
+                        System.out.println("triangulo");;
+                        System.out.println("Ingrese lado 1");
+                        x1 = ta1.nextInt();
+                        System.out.println("Ingrese lado 2");
+                        x2 = ta2.nextInt();
+                        System.out.println("Ingrese lado 3");
+                        x3 = ta3.nextInt();
+                        triangulo= (x1+x2+x3);
+                        System.out.println("El area del triangulo es: "+triangulo);
                            break;
                         case 2: //case 2 para el cuadrado
                     Scanner ca1= new Scanner(System.in);
@@ -228,9 +228,10 @@ public class Pr1 {
                         default:
                              System.out.println("-----------------------");
                             System.out.println("Opcion incorrecta");
-                            break;   
+                            break;
+                            
                     }// fin del switch para las areas
-                    switch(u1){//switch para los perimetros
+                    /*switch(u1){//switch para los perimetros*/
                         case 2://case 2 para los perimetros
                     Scanner k1= new Scanner(System.in);
                     int k=0;
@@ -321,10 +322,7 @@ public class Pr1 {
                         default:
                              System.out.println("********");
                             System.out.println("Opcion incorrecta");
-                            break;   
-
-                            break; // break de los perimetros
-                            
+                            break;       
                   }//fin de swith para los perimetros
 
                     break;//fin de las operaciones geometricas 
@@ -341,18 +339,37 @@ public class Pr1 {
                      i=i1.nextInt();
                     switch(i){ //Inicio de switch para las operacines estadisticas
                         case 1:
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            break;
+                             int arreglo[] = { 550, 51, 89, 33, 50, 30, 10, 10, 1, 2, 3, 51, 9 };
+
+        // Comenzamos con el promedio, lo cual es la media
+        int sumatoria = 0;
+        for (int x = 0; x < arreglo.length; x++) {
+            sumatoria += arreglo[x];
+        }
+        double media = sumatoria / arreglo.length;
+                          Arrays.sort(arreglo);
+
+        int mediana;
+        int mitad = arreglo.length / 2;
+        // Si la longitud es par, se deben promediar los del centro
+        if (arreglo.length % 2 == 0) {
+            mediana = (arreglo[mitad - 1] + arreglo[mitad]) / 2;
+        } else {
+            mediana = arreglo[mitad];
+        }
+
+        // Imprimir valores
+        System.out.println("El arreglo es: ");
+        for (int x = 0; x < arreglo.length; x++) {
+            System.out.printf("%d ", arreglo[x]);
+        }
+        System.out.printf("\nLa media es %.2f y la mediana es %d", media, mediana);
                         default:
                              System.out.println("-----------------------");
                             System.out.println("Opcion incorrecta");
                             break;   
-                    } //Fin de switch para las operaciones estadistica
-                    
-                    break; // break de estadistica
+                    } //Fin de switch para las operaciones estadistic
+                    break; // break de estadistica caso 3 
                 case 4:// case 4 avanzadas
                     Scanner d1= new Scanner(System.in);
                     int d=0;
@@ -364,8 +381,8 @@ public class Pr1 {
                       d=d1.nextInt();
                     switch(d){ //Inicio de switch para las operacines avanzadas
                         case 1:
-                            Scanner entrada=new Scanner(System,in);
-                            int facotorial =1;
+                            Scanner entrada=new Scanner(System.in);
+                            int factorial =1;
                               System.out.println("Ingrese el numero el cual desee calcularle el factoria:" );
                             int numero=entrada.nextInt();
                             
@@ -377,14 +394,12 @@ public class Pr1 {
                             System.out.println("El factorial del numero es:"+factorial );
                             break;
                         case 2:
-                             Scanner en=new Scanner(System,in);
-                            int val, pre =0, pos=1;
+                             Scanner en=new Scanner(System.in);
+                            int val, pre =0, pos=1, n31=0;
                             System.out.println("Ingrese el numero el cual desee calcularle su serie Fibonacci:" );
-                            int n=en.nextInt();
-                            
+                            n31=en.nextInt();
                             System.out.print(pre+"\t"+pos);
-                            
-                            for(int x=3; x <=n; x++){
+                            for(int x3=0; x3<=n31; x3++){
                                 val= pre+pos;
                                 pre= pos;
                                 pos=val;
@@ -393,27 +408,29 @@ public class Pr1 {
                             break;
                         default:
                              System.out.println("-----------------------");
-                            System.out.println("Opcion incorrecta");
-                            break
-                    } //Fin de switch para las operaciones avanzadas 
-                 
+                             System.out.println("Opcion incorrecta");
+                             break;
+                    } //Fin de switch para las operaciones avanzadas
                     break; // break de avanzadas 
                 default:
                     System.out.println("********");
                     System.out.println("Opcion incorrecta");
                     break;
             }//Cierre del switch del menu
+                    
             System.out.println("-----------------");
             System.out.println("Dese continuar?");
             System.out.println("Presione 1 para volver a inciar");
             System.out.print("Presione cualquier numero para finalizar: ");
             System.out.println("");
             System.out.println("");
-        o1=w.nextInt();
+            o1=w.nextInt();
+        }
         }while(o1==1);//Final do
+             
         System.out.println("Gracias por usar la calculadora");     
         }//Fin del programa
-        else if(e==2){
+        else if(e1==2){
             System.out.println("Fin del programa");
         }
         else{System.out.println("Error opcion invalida");}
@@ -422,5 +439,6 @@ public class Pr1 {
     
 }
 
+    }   
 
 
